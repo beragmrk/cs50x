@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block main %}
+<h2>Your Tasks</h2>
+<form action="/add" method="post">
+    <input name="title" placeholder="Title" required>
+    <input name="description" placeholder="Description">
+    <input type="date" name="due" required>
+    <button type="submit">Add Task</button>
+</form>
+<table class="table mt-4">
+    <thead>
+        <tr><th>Title</th><th>Description</th><th>Due Date</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
+            <td>{{ task.due }}</td>
+            <td><a href="/complete/{{ task.id }}">Complete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/logout">Logout</a>
+{% endblock %}
