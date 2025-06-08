@@ -1,0 +1,25 @@
+HTML tags:
+1. <!DOCTYPE html>
+2. <html>
+3. <head>
+4. <meta>
+5. <title>
+6. <link>
+7. <body>
+8. <header>
+9. <nav>
+10. <ul>, <li>, <a>, <h1>, <p>, <button>, <script> (more than 10 used!)
+
+CSS properties:
+1. background-color
+2. font-family
+3. color
+4. margin-top
+5. text-decoration
+
+Bootstrap:
+- Used the Bootstrap CSS framework to style the navbar and button.
+- Applied Bootstrap classes like "container", "btn", and "nav" to enhance layout and style.
+
+JavaScript:
+- Used JavaScript to add interactivity via an alert when the user clicks the button on the homepage.

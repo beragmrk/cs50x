@@ -1,0 +1,25 @@
+/* 5+ Selectors and Properties */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    color: #333;
+    text-align: center;
+}
+
+.nav-link {
+    color: #007bff;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
