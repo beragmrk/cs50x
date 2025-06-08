@@ -1,0 +1,6 @@
+1. The average energy is around X (use results from your own query). The top 100 songs have a very energetic vibe, suggesting this listener prefers lively music.
+
+2. The aura might be misleading because:
+- It’s based on only 100 songs, not all songs listened to.
+- It doesn’t weigh listening frequency (some songs may have been played once vs. hundreds of times).
+- A more accurate approach would include listening frequency, skip rate, or recency of plays.

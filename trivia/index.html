@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Trivia Quiz</h1>
+
+    <!-- Part 1: Multiple Choice -->
+    <div>
+        <h2>Part 1: Multiple Choice</h2>
+        <h3>Which planet is known as the Red Planet?</h3>
+        <button id="choice1">Venus</button>
+        <button id="choice2">Mars</button> <!-- Correct -->
+        <button id="choice3">Jupiter</button>
+        <p id="part1-feedback"></p>
+    </div>
+
+    <!-- Part 2: Free Response -->
+    <div>
+        <h2>Part 2: Free Response</h2>
+        <h3>Who wrote the play 'Romeo and Juliet'?</h3>
+        <input type="text" id="answer">
+        <button id="submit">Submit</button>
+        <p id="part2-feedback"></p>
+    </div>
+
+    <script>
+        // Part 1: Multiple Choice
+        const correctButton = document.querySelector("#choice2");
+        const incorrectButtons = [document.querySelector("#choice1"), document.querySelector("#choice3")];
+        const part1Feedback = document.querySelector("#part1-feedback");
+
+        correctButton.addEventListener("click", function() {
+            correctButton.style.backgroundColor = "green";
+            part1Feedback.textContent = "Correct!";
+        });
+
+        incorrectButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                button.style.backgroundColor = "red";
+                part1Feedback.textContent = "Incorrect";
+            });
+        });
+
+        // Part 2: Free Response
+        const submitButton = document.querySelector("#submit");
+        const answerField = document.querySelector("#answer");
+        const part2Feedback = document.querySelector("#part2-feedback");
+
+        submitButton.addEventListener("click", function() {
+            const answer = answerField.value.trim().toLowerCase();
+            if (answer === "shakespeare" || answer === "william shakespeare") {
+                answerField.style.backgroundColor = "green";
+                part2Feedback.textContent = "Correct!";
+            } else {
+                answerField.style.backgroundColor = "red";
+                part2Feedback.textContent = "Incorrect";
+            }
+        });
+    </script>
+</body>
+</html>
